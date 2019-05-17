@@ -44,5 +44,10 @@ public class PayeeController {
 	public String validatePayeeOtp(@PathVariable("payeeId") long payeeId, @RequestParam("otp") long otp) {
 		return payeeService.validatePayee(otp, payeeId);
 	}
+	
+	@GetMapping("/get")
+	public void hello() {
+		System.out.println("Hello");	
+	}
 
 }
